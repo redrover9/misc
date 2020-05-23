@@ -1,6 +1,7 @@
 #!/bin/bash
-telnetvar=exec ss -tulpn | grep 21
-if [[ -z "$telnetvar" ]] 
+telnetvar=$(ss -tulpn | grep 21)
+if [[ $telnetvar ]]
 then
 	vlc /home/grace/Documents/dialupnoise.m4a
 fi
+
