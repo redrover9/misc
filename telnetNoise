@@ -3,9 +3,9 @@ telnetvar=$(ss -tulpn | grep 21)
 
 if [[ $telnetvar ]]
 then
-	if [[ -f dialupnoise.m4a ]]
+	if [[ -f dialupnoise.webm ]]
 	then	
-		vlc dialupnoise.m4a
+		firefox dialupnoise.webm
 	else
 		wget https://telnetnoise.s3.us-east-2.amazonaws.com/dialupnoise.webm
 		firefox dialupnoise.webm
