@@ -1,5 +1,5 @@
 #!/bin/bash
-telnetvar=$(ss -tulpn | grep 631)
+telnetvar=$(ss -tulpn | grep 21)
 
 if [[ $telnetvar ]]
 then
