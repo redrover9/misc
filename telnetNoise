@@ -5,10 +5,10 @@ if [[ $telnetvar ]]
 then
 	if [[ -f dialupnoise.webm ]]
 	then	
-		firefox dialupnoise.webm
+		vlc dialupnoise.webm
 	else
 		wget https://telnetnoise.s3.us-east-2.amazonaws.com/dialupnoise.webm
-		firefox dialupnoise.webm
+		vlc dialupnoise.webm
 	fi
 fi
 
