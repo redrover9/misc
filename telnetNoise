@@ -1,7 +1,14 @@
 #!/bin/bash
-telnetvar=$(ss -tulpn | grep 21)
+telnetvar=$(ss -tulpn | grep 631)
+
 if [[ $telnetvar ]]
 then
-	vlc /home/grace/Documents/dialupnoise.m4a
+	if [[ -f dialupnoise.m4a ]]
+	then	
+		vlc dialupnoise.m4a
+	else
+		wget https://telnetnoise.s3.us-east-2.amazonaws.com/dialupnoise.webm
+		firefox dialupnoise.webm
+	fi
 fi
 
