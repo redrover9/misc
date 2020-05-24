@@ -1,5 +1,5 @@
 #!/bin/bash
-telnetvar=$(ss -tulpn | grep 21)
+telnetvar=$(ps aux | egrep 'telnet .* [0-9]')
 
 if [[ $telnetvar ]]
 then
