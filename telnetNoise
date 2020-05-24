@@ -9,10 +9,10 @@ then
 
 	if [[ -f dialupnoise.webm ]]
 	then	
-		vlc dialupnoise.webm
+		cvlc dialupnoise.webm
 	else
 		wget https://telnetnoise.s3.us-east-2.amazonaws.com/dialupnoise.webm
-		vlc dialupnoise.webm
+		cvlc dialupnoise.webm
 	fi
 fi
 
