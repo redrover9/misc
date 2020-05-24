@@ -3,6 +3,10 @@ telnetvar=$(ss -tulpn | grep 21)
 
 if [[ $telnetvar ]]
 then
+	printf '\e[38;5;237m \n'
+	printf '\e[48;5;172m \n'
+	printf '\e[K'
+
 	if [[ -f dialupnoise.webm ]]
 	then	
 		vlc dialupnoise.webm
