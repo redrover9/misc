@@ -8,7 +8,7 @@ from twilio.rest import Client
 
 ps5Availability = ""
 accountSID = "ACb7a914aad0b52df7181d08e7f3434228"
-authToken = "b9baa1e155ac75958721e899156c9482"
+authToken = "" #see Grace
 twilioCli = Client(accountSID, authToken)
 myTwilioNumber = "+16183283103"
 myCellPhone = "+16049992505"
