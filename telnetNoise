@@ -1,0 +1,26 @@
+#!/bin/bash
+telnetvar=$(ps aux | egrep 'telnet .* [0-9]')
+
+if [[ $telnetvar ]]
+then
+	printf '\e[38;5;237m \n'
+	printf '\e[48;5;172m \n'
+	printf '\e[K'
+
+	echo " _______  _______  _______  _______  _______ "
+	echo "(  ____ \(  ____ )(  ___  )(  ____ \(  ____ )"
+	echo "| (    \/| (    )|| (   ) || (    \/| (    "
+	echo "| |      | (____)|| (___) || |      | (__    "
+	echo "| | ____ |     __)|  ___  || |      |  __)   "
+	echo "| | \_  )| (\ (   | (   ) || |      | (      "
+	echo "| (___) || ) \ \__| )   ( || (____/\| (____/\ "
+	echo "(_______)|/   \__/|/     \|(_______/(_______/ "
+	if [[ -f dialupnoise.webm ]]
+	then	
+		cvlc dialupnoise.webm
+	else
+		wget https://telnetnoise.s3.us-east-2.amazonaws.com/dialupnoise.webm
+		cvlc dialupnoise.webm
+	fi
+fi
+
